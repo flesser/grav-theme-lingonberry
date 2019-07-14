@@ -23,7 +23,7 @@
               {% if slide.image or slide.title  %}
               <li>
                 {% if slide.image %}
-                <img src="{{ page.media.images[slide.image].url }}" class="attachment-post-image" alt="{{ slide.title }}">
+                {{ page.media.images[slide.image].cropZoom(1200,800).html(slide.title, slide.title, 'attachment-post-image') }}
                 {% endif %}
                 {% if slide.title %}
                 <div class="media-caption-container">
